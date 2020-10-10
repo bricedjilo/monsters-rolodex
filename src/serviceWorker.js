@@ -101,7 +101,11 @@ function registerValidSW(swUrl, config) {
 function checkValidServiceWorker(swUrl, config) {
   // Check if the service worker can be found. If it can't reload the page.
   fetch(swUrl, {
+<<<<<<< HEAD
     headers: { 'Service-Worker': 'script' },
+=======
+    headers: { 'Service-Worker': 'script' }
+>>>>>>> e8db0a34a9ac01fe97968d2845aad31316e3fc5c
   })
     .then(response => {
       // Ensure service worker exists, and that we really are getting a JS file.
@@ -130,6 +134,7 @@ function checkValidServiceWorker(swUrl, config) {
 
 export function unregister() {
   if ('serviceWorker' in navigator) {
+<<<<<<< HEAD
     navigator.serviceWorker.ready
       .then(registration => {
         registration.unregister();
@@ -137,5 +142,10 @@ export function unregister() {
       .catch(error => {
         console.error(error.message);
       });
+=======
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+>>>>>>> e8db0a34a9ac01fe97968d2845aad31316e3fc5c
   }
 }
